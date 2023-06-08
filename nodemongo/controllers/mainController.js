@@ -10,8 +10,8 @@ module.exports.task=async (req,res)=>{
 }
 
 module.exports.sendtask=async(req,res)=>{
-    const task=req.body;
-
-    TaskModule.create(task).then((data)=>{console.log(data); res.status(200).send(data)}).catch(error=>console.log(error));
+    const {data}=req.body;
+    console.log(req.body);
+    TaskModule.create(data).then((data)=>{console.log(data); res.status(200).send(data)}).catch(error=>console.log(error));
     
 }

@@ -7,6 +7,10 @@ const taskSchema = new mongoose.Schema({
     message:{
         type:String,
         require:true
+    },
+    time:{
+        type:String,
+        require:true
     }
 })
 
