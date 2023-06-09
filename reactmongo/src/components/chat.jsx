@@ -34,7 +34,7 @@ useEffect(()=>{
                 <input type="text" {...register('message')}/>
                 <button type="submit">Send</button>
             </form>
-            <ul>
+            <ul style={{"listStyleType":"none"}}>
             {data.length>0?
             data.map((msg)=><li> {msg.message}</li>)
             :"Loading"}       
